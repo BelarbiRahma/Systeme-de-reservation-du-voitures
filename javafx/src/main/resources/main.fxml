@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.soa.clientfx.controllers.MainController"
+            styleClass="main-pane">
+
+    <!-- TOP: Titre -->
+    <top>
+        <VBox styleClass="header-box">
+            <Label text="🏎️ Système de Réservation de Voitures"
+                   styleClass="header-label"/>
+            <Label text="JavaFX 25 + Spring Boot + ActiveMQ"
+                   styleClass="subheader-label"/>
+        </VBox>
+    </top>
+
+    <!-- CENTER: Table des voitures -->
+    <center>
+        <VBox spacing="10" styleClass="center-box">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Voitures disponibles" styleClass="section-label"/>
+                <Button fx:id="btnRefresh" text="🔄 Rafraîchir" styleClass="action-button"/>
+            </HBox>
+
+            <TableView fx:id="voituresTable" styleClass="data-table">
+                <columns>
+                    <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="150"/>
+                    <TableColumn fx:id="colMarque" text="Marque" prefWidth="120"/>
+                    <TableColumn fx:id="colModele" text="Modèle" prefWidth="120"/>
+                    <TableColumn fx:id="colPrixJour" text="Prix/Jour" prefWidth="100"/>
+                    <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+
+            <Label fx:id="lblStatus" text="Chargement..." styleClass="status-label"/>
+        </VBox>
+    </center>
+
+    <!-- BOTTOM: Boutons d'action -->
+    <bottom>
+        <HBox spacing="20" alignment="CENTER" styleClass="button-bar">
+            <Button fx:id="btnReserver" text="📝 Réserver"
+                    styleClass="primary-button" prefWidth="150"/>
+            <Button fx:id="btnJMS" text="📨 Test JMS"
+                    styleClass="secondary-button" prefWidth="150"/>
+            <Button fx:id="btnStats" text="📊 Statistiques"
+                    styleClass="secondary-button" prefWidth="150"/>
+        </HBox>
+    </bottom>
+
+    <!-- Style -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</BorderPane>

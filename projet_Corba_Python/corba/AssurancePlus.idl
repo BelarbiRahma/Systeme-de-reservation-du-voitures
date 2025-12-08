@@ -1,0 +1,8 @@
+module assurance {
+    interface ExtraService {
+        double calcularTaxe(in double montant);
+        double calcularCoutAssurance(in string typeAssurance, in double valeurVehicule);
+        string getInfoService();
+        boolean estDisponible();
+    };
+};
