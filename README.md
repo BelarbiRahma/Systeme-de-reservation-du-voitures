@@ -47,6 +47,5 @@ car-reservation/
 | RMI connection failed | Run `rmiregistry` in terminal |
 | ActiveMQ not starting | Check if port 61616 is available |
 | Database connection error | Verify MySQL credentials |
-- **All essential info** without fluff
 
-Perfect for GitHub! Want any adjustments?
+Perfect for GitHub! Want any adjustments
