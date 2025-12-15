@@ -48,4 +48,3 @@ car-reservation/
 | ActiveMQ not starting | Check if port 61616 is available |
 | Database connection error | Verify MySQL credentials |
 
-Perfect for GitHub! Want any adjustments
