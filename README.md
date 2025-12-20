@@ -38,5 +38,4 @@ car-reservation/
 ├── corba-server/      # Tax service (Python + CORBA)
 └── README.md
 ```
-| Database connection error | Verify MySQL credentials |
 
